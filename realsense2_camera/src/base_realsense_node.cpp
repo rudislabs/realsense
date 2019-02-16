@@ -92,7 +92,7 @@ BaseRealSenseNode::BaseRealSenseNode(ros::NodeHandle& nodeHandle,
     // Infrared stream - Left
     _is_frame_arrived[INFRA1] = false;
     _format[INFRA1] = RS2_FORMAT_Y8;   // libRS type
-    _image_format[INFRA1] = mono8;    // CVBridge type
+    _image_format[INFRA1] = CV_8UC1;    // CVBridge type
     _encoding[INFRA1] = sensor_msgs::image_encodings::MONO8; // ROS message type
     _unit_step_size[INFRA1] = sizeof(uint8_t); // sensor_msgs::ImagePtr row step size
     _stream_name[INFRA1] = "infra1";
@@ -101,7 +101,7 @@ BaseRealSenseNode::BaseRealSenseNode(ros::NodeHandle& nodeHandle,
     // Infrared stream - Right
     _is_frame_arrived[INFRA2] = false;
     _format[INFRA2] = RS2_FORMAT_Y8;   // libRS type
-    _image_format[INFRA2] = mono8;    // CVBridge type
+    _image_format[INFRA2] = CV_8UC1;    // CVBridge type
     _encoding[INFRA2] = sensor_msgs::image_encodings::MONO8; // ROS message type
     _unit_step_size[INFRA2] = sizeof(uint8_t); // sensor_msgs::ImagePtr row step size
     _stream_name[INFRA2] = "infra2";
